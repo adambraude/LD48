@@ -15,13 +15,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func start_game():
+func _on_Options_pressed():
+	get_tree().change_scene("res://Sandboxes/First Menu/Options.tscn")
+
+
+func _on_EasyDifficulty_pressed():
 	get_tree().change_scene("res://Sandboxes/Sandbox - Eli.tscn")
 
 
-func _on_BeginGame_pressed():
-	start_game()
-
-
-func _on_Options_pressed():
-	get_tree().change_scene("res://Sandboxes/First Menu/Options.tscn")
+func _on_HardDifficulty_pressed():
+	get_tree().change_scene("res://Sandboxes/Sandbox - Eli.tscn")
