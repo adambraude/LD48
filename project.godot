@@ -16,7 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="LD48"
-config/icon="res://icon.png"
+run/main_scene="res://States/Main-Menu.tscn"
+config/icon="res://assets/icon.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=1200
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [rendering]
 
