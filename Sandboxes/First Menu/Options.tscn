@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/GROBOLD.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sandboxes/First Menu/Options.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="OptionsMargin" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1800.0
+margin_bottom = 1000.0
+
+[node name="MenuOptions" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 1680.0
+margin_bottom = 920.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Sound" type="Label" parent="HBoxContainer/MenuOptions"]
+margin_top = 335.0
+margin_right = 1680.0
+margin_bottom = 435.0
+custom_fonts/font = SubResource( 1 )
+text = "Music:      "
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer/MenuOptions/Sound"]
+margin_left = 277.312
+margin_top = 12.9774
+margin_right = 364.312
+margin_bottom = 52.9774
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToMainMenu" type="Label" parent="HBoxContainer/MenuOptions"]
+margin_top = 485.0
+margin_right = 1680.0
+margin_bottom = 585.0
+custom_fonts/font = SubResource( 5 )
+text = "Return to Main Menu"
+
+[node name="Button" type="Button" parent="HBoxContainer/MenuOptions/ReturnToMainMenu"]
+margin_right = 1017.0
+margin_bottom = 83.0
+action_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HBoxContainer/MenuOptions/ReturnToMainMenu/Button" to="." method="_on_Button_pressed"]
