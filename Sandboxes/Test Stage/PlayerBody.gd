@@ -16,9 +16,16 @@ var grounded : bool = false
 # components
 onready var sprite = $Sprite
 
+func _ready():
+	hide()
+
 func _physics_process(delta):
 	# reset horizontal velocity
 	vel.x = 0
+	
+	# Gravity and Velocity
+	vel.y += GRAVITY * delta
+	vel += Vector2.DOWN * 9.81 * GRAVITY * delta
 	
 	# movement inputs
 	if Input.is_action_pressed("ui_left"):
@@ -43,9 +50,9 @@ func _physics_process(delta):
 		jumping = true
 	
 	# If player is no longer pressing the jump button, cut jump early
-	if Input.is_action_just_released("jump"):
+	#if Input.is_action_just_released("jump"):
 		#jump_cut(delta)
-		jumping = false
+		#jumping = false
 	
 	if vel.y > 0:
 		vel += Vector2.UP * (-9.81) * FALL_MULTIPLIER
@@ -56,10 +63,10 @@ func _physics_process(delta):
 	
 	# gravity
 	#vel.y += GRAVITY * delta
-	if jumping:
-		vel += Vector2.DOWN * 9.81 * GRAVITY * delta
-	else:
-		vel += Vector2.DOWN * 9.81 * SHORT_JUMP_SCALE * delta
+	#if jumping:
+	#	vel += Vector2.DOWN * 9.81 * GRAVITY * delta
+	#else:
+	#	vel += Vector2.DOWN * 9.81 * SHORT_JUMP_SCALE * delta
 	
 	# sprite direction
 	if vel.x < 0:
@@ -69,6 +76,11 @@ func _physics_process(delta):
 
 func jump():
 	vel.y = -MAX_JUMP
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
 
 # Not quite sure what the numbers here do
 func jump_cut(delta):

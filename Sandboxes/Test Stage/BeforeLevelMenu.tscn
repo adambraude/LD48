@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sandboxes/Test Stage/BeforeLevelMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sandboxes/Test Stage/PlayLabel.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/GROBOLD.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="BeforeLevelMenu" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayLabel" type="Label" parent="."]
+margin_top = 400.0
+margin_right = 1920.0
+margin_bottom = 650.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Press Enter to Play"
+align = 1
+valign = 1
+uppercase = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

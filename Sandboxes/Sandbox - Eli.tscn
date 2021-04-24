@@ -1,46 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sandboxes/Test Stage/Test Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sandboxes/Test Stage/Tile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/icon.png" type="Texture" id=3]
+[ext_resource path="res://Sandboxes/Test Stage/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sandboxes/Test Stage/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sandboxes/Test Stage/BeforeLevelMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sandboxes/TestLevel.gd" type="Script" id=5]
 
 [node name="Test Level" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="BeforeLevelMenu" parent="." instance=ExtResource( 4 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 976.825, 872.997 )
 
-[node name="Level" type="Node2D" parent="."]
+[node name="PlayerStartPosition" type="Position2D" parent="."]
+position = Vector2( 994.501, 783.478 )
 
-[node name="Tile" parent="Level" instance=ExtResource( 2 )]
-position = Vector2( 317.058, 736.628 )
-scale = Vector2( 5, 2 )
+[node name="Level" parent="." instance=ExtResource( 2 )]
 
-[node name="Tile2" parent="Level" instance=ExtResource( 2 )]
-position = Vector2( 956.766, 1046.54 )
-scale = Vector2( 28, 1 )
-
-[node name="Tile3" parent="Level" instance=ExtResource( 2 )]
-position = Vector2( 1612.38, 723.159 )
-scale = Vector2( 5, 2 )
-
-[node name="Tile4" parent="Level" instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 36.7696, 480.833 )
-scale = Vector2( 1, 20 )
-
-[node name="Tile5" parent="Level" instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 1891.08, 516.752 )
-scale = Vector2( 1, 20 )
-
-[node name="Tile6" parent="Level" instance=ExtResource( 2 )]
-position = Vector2( 963.072, 17.9594 )
-scale = Vector2( 30, 1 )
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 0.439216, 0.439216, 0.439216, 1 )
-position = Vector2( 960.251, 538.815 )
-scale = Vector2( 29.9472, 16.8657 )
-texture = ExtResource( 3 )
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
