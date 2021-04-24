@@ -15,7 +15,6 @@ func _ready():
 
 func _process(delta):
 	if (collidingObjs).size() > 0:
-		print("hit")
 		emit_signal("damageTaken", damage)
 
 func onAreaEntered(area):

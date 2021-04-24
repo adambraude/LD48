@@ -3,7 +3,7 @@ extends Node2D
 signal startAnim
 
 # Declare member variables here. Examples:
-export var maxHealth = 100.0
+export var maxHealth = 10.0
 var currentHealth = maxHealth
 
 var invuln = false
@@ -15,7 +15,6 @@ func _ready():
 func takeDamage(damage):
 	if invuln:
 		return
-	print("taking " + str(damage) + " damage")
 	currentHealth -= damage;
 	if currentHealth < 0:
 		currentHealth = 0

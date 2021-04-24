@@ -80,7 +80,6 @@ func jump():
 func start(pos):
 	position = pos
 	show()
-	$CollisionShape2D.disabled = false
 
 # Not quite sure what the numbers here do
 func jump_cut(delta):
