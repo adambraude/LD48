@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 func _on_Options_pressed():
-	get_tree().change_scene("res://Sandboxes/First Menu/Options.tscn")
+	get_tree().change_scene("res://Sandboxes/Test Menus/Options.tscn")
 
 
 func _on_EasyDifficulty_pressed():
@@ -25,3 +25,10 @@ func _on_EasyDifficulty_pressed():
 
 func _on_HardDifficulty_pressed():
 	get_tree().change_scene("res://Sandboxes/Sandbox - Eli.tscn")
+
+
+func _on_Quit_pressed():
+	close_game()
+
+func close_game():
+	get_tree().quit()
