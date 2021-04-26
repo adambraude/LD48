@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark Fantasy Studio- Dark rider 32000 bitrate.mp3-c01eb16c542338cb1d7cadaff670c08d.mp3str"
+
+[deps]
+
+source_file="res://Music/Dark Fantasy Studio- Dark rider 32000 bitrate.mp3"
+dest_files=[ "res://.import/Dark Fantasy Studio- Dark rider 32000 bitrate.mp3-c01eb16c542338cb1d7cadaff670c08d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

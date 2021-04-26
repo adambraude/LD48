@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Music/Dark Fantasy Studio- Dark rider 32000 bitrate.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Music/Dark Fantasy Studio- Eternity 32000 bitrate.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Music/2-Dark Fantasy Studio- Last hope 32000 bitrate.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Music/Dark Fantasy Studio- Venom 32000 bitrate.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Sandboxes/Test Music/Music Player.gd" type="Script" id=5]
+[ext_resource path="res://Music/6-Dark Fantasy Studio- Acciden 32000 bitratet.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Music/2-Dark Fantasy Studio- Angry bull 32000 bitrate.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Music/13-Dark Fantasy Studio- Happy lake 32000 bitrate.mp3" type="AudioStream" id=8]
+
+[node name="Music Controller" type="Node"]
+script = ExtResource( 5 )
+
+[node name="Angry Bull" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -18.175
+
+[node name="Dark Rider" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.097
+
+[node name="Eternity" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -11.107
+
+[node name="Last Hope" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -16.155
+
+[node name="Venom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.146
+
+[node name="Accident" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -13.126
+
+[node name="Happy Lake" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -17.165
+
+[connection signal="finished" from="Angry Bull" to="." method="song_finished"]
+[connection signal="finished" from="Dark Rider" to="." method="song_finished"]
+[connection signal="finished" from="Eternity" to="." method="song_finished"]
+[connection signal="finished" from="Last Hope" to="." method="song_finished"]
+[connection signal="finished" from="Venom" to="." method="song_finished"]
+[connection signal="finished" from="Accident" to="." method="song_finished"]
+[connection signal="finished" from="Happy Lake" to="." method="song_finished"]

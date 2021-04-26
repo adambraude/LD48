@@ -48,13 +48,14 @@ margin_bottom = 435.0
 custom_fonts/font = SubResource( 1 )
 text = "Music:      "
 
-[node name="CheckButton" type="CheckButton" parent="HBoxContainer/MenuOptions/Sound"]
+[node name="MusicOnOff" type="CheckButton" parent="HBoxContainer/MenuOptions/Sound"]
 margin_left = 277.312
 margin_top = 12.9774
 margin_right = 364.312
 margin_bottom = 52.9774
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 2 )
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,4 +76,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="toggled" from="HBoxContainer/MenuOptions/Sound/MusicOnOff" to="." method="_on_MusicOnOff_toggled"]
 [connection signal="pressed" from="HBoxContainer/MenuOptions/ReturnToMainMenu/Button" to="." method="_on_Button_pressed"]

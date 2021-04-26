@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2-Dark Fantasy Studio- Last hope 32000 bitrate.mp3-31a76b92dfb15b53b84cd81e154ad20e.mp3str"
+
+[deps]
+
+source_file="res://Music/2-Dark Fantasy Studio- Last hope 32000 bitrate.mp3"
+dest_files=[ "res://.import/2-Dark Fantasy Studio- Last hope 32000 bitrate.mp3-31a76b92dfb15b53b84cd81e154ad20e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

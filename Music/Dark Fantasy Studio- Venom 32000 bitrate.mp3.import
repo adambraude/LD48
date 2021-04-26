@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark Fantasy Studio- Venom 32000 bitrate.mp3-accef849d004d27597474b6c5b377ddc.mp3str"
+
+[deps]
+
+source_file="res://Music/Dark Fantasy Studio- Venom 32000 bitrate.mp3"
+dest_files=[ "res://.import/Dark Fantasy Studio- Venom 32000 bitrate.mp3-accef849d004d27597474b6c5b377ddc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

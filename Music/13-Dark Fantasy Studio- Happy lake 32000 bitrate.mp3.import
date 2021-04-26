@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/13-Dark Fantasy Studio- Happy lake 32000 bitrate.mp3-24b9a867d6331edffd6ff5699f14a9b9.mp3str"
+
+[deps]
+
+source_file="res://Music/13-Dark Fantasy Studio- Happy lake 32000 bitrate.mp3"
+dest_files=[ "res://.import/13-Dark Fantasy Studio- Happy lake 32000 bitrate.mp3-24b9a867d6331edffd6ff5699f14a9b9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
