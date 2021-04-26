@@ -18,6 +18,10 @@ config/name="LD48"
 run/main_scene="res://States/Main-Menu.tscn"
 config/icon="res://assets/icon.png"
 
+[autoload]
+
+AllMusicPlayer="*res://Sandboxes/Test Music/All Music Player.tscn"
+
 [display]
 
 window/size/width=1920

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music/Dark Fantasy Studio- Dark rider 32000 bitrate.mp3" type="AudioStream" id=1]
+
+[node name="Background Music" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -10.098
+autoplay = true
