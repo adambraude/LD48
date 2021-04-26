@@ -3,7 +3,7 @@ extends KinematicBody2D
 # physics
 const SPEED = 600
 const PASSIVE_JUMP: int = 1000
-const MAX_JUMP = 2000
+const MAX_JUMP = 3000
 const GRAVITY: int = 800
 const FALL_MULTIPLIER: float = 1.0
 const SHORT_JUMP_SCALE: float = 2000.0
@@ -37,17 +37,17 @@ func _physics_process(delta):
 	#if Input.is_action_pressed("jump") and is_on_floor():
 	#	vel.y -= jumpForce
 	
+	# If player hits ground without pressing the jump button, jump the passive
+	# amount
+	if is_on_floor() and vel.y >= 0:
+		vel.y = -PASSIVE_JUMP
+		jumping = true
+	
 	# If the jump button is being pressed, initiate normal jump
 	if Input.is_action_pressed("jump"):
 		if is_on_floor():
 			jump()
 			jumping = true
-	
-	# If player hits ground without pressing the jump button, jump the passive
-	# amount
-	if is_on_floor():
-		vel.y -= PASSIVE_JUMP
-		jumping = true
 	
 	# If player is no longer pressing the jump button, cut jump early
 	#if Input.is_action_just_released("jump"):

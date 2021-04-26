@@ -19,3 +19,4 @@ func _process(delta):
 	
 func start_level():
 	$Player.start($PlayerStartPosition.position)
+	$Shark.beginFight()
