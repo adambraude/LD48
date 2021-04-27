@@ -10,13 +10,12 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
 config/name="LD48"
-run/main_scene="res://States/Main-Menu.tscn"
+run/main_scene="res://Sandboxes/Test Menus/Menu.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]

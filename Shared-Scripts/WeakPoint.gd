@@ -20,7 +20,7 @@ func _process(delta):
 func onAreaEntered(area):
 	collidingObjs.append(area)
 	if $Particles:
-		$Particles.position = area.global_position - global_position + Vector2.DOWN*32
+		$Particles.position = area.global_position - global_position + Vector2.DOWN*96
 		$Particles.restart()
 		if area.get_parent().has_method("jump"):
 			area.get_parent().jump()

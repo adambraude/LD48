@@ -20,11 +20,11 @@ func _on_Options_pressed():
 
 
 func _on_EasyDifficulty_pressed():
-	get_tree().change_scene("res://Sandboxes/Sandbox - Eli.tscn")
+	get_tree().change_scene("res://Sandboxes/Sandbox - Adam-easy.tscn")
 
 
 func _on_HardDifficulty_pressed():
-	get_tree().change_scene("res://Sandboxes/Sandbox - Eli.tscn")
+	get_tree().change_scene("res://Sandboxes/Sandbox - Adam.tscn")
 
 
 func _on_Quit_pressed():

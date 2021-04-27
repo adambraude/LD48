@@ -7,6 +7,8 @@ export var maxHealth = 100.0
 var currentHealth = maxHealth
 export var healthRegen = 0.0;
 
+export var deathGood = false
+
 var invuln = false
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +26,11 @@ func takeDamage(damage):
 	currentHealth -= damage;
 	if currentHealth < 0:
 		currentHealth = 0
+		if deathGood:
+			get_tree().change_scene("res://Sandboxes/Test Menus/Menu.tscn")
+			pass
+		else:
+			get_tree().change_scene("res://Sandboxes/Test Menus/Fail Screen.tscn")
 	$Bar.rect_scale = Vector2(currentHealth/maxHealth, 1)
 	invuln = true
 	$Invulnerability.start()

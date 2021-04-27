@@ -46,6 +46,7 @@ margin_bottom = 1084.45
 position = Vector2( 76.6243, 146.275 )
 
 [node name="Shark" parent="." instance=ExtResource( 2 )]
+difficulty = 1.0
 
 [node name="Level" parent="." instance=ExtResource( 4 )]
 position = Vector2( -48.0983, 10.2972 )
